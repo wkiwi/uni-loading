@@ -1,5 +1,5 @@
 <template>
-  <view class="mask" :class= "mask == 1 ? 'mask-show' : ''" @click="close" v-if="show">
+  <view class="mask" :class= "mask == 1 ? 'mask-show' : ''" @click="Mclose" v-if="show">
 		<!-- 加载动画开始 -->
     <view class="container">
       <view class="popsicle">
@@ -28,14 +28,17 @@ export default {
 		};
   },
 	methods:{
-		close(){
+		Mclose(){
 			if(this.click == 1){
 				this.show = false
 			}
 		},
 		open(){
 			this.show = true
-		}
+    },
+    close(){
+      this.show = false
+    }
 	}
 };
 </script>

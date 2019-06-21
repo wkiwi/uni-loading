@@ -67,6 +67,12 @@ export default {
 	color: #fff;
 	font-size: 28upx;
 }
+
+
+
+
+
+/* loading加载动画的css */
 .container {
   height: 280upx;
   width: 200upx;

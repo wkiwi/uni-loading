@@ -26,7 +26,6 @@ this.$refs.loading.close()
 
 ```
 
-
-![demo](https://github.com/wkiwi/uni-loading/blob/master/demo.gif "demo")
+![demo](https://raw.githubusercontent.com/wkiwi/uni-loading/master/demo.gif "demo")
 
 

@@ -1,5 +1,8 @@
 <template>
   <view class="content">
+		<view class="box">
+      <switch @change="ChangeLoading" />
+    </view>
     <view class="box">
       <Loading1></Loading1>
     </view>
@@ -90,6 +93,9 @@
 		<view class="box">
       <Loading30></Loading30>
     </view>
+    <w-loading text="加载中.." mask="1" click="1" ref="loading"></w-loading>
+		<!-- mask:  	0 无遮罩层              		|     1 有遮罩层 						 -->
+		<!-- click:  	0 点击空白无法关闭加载状态    |     1 点击空白可关闭加载状态 -->
   </view>
 </template>
 
@@ -155,15 +161,19 @@ export default {
 		Loading27,
 		Loading28,
 		Loading29,
-		Loading30
+		Loading30,
   },
   data() {
     return {
-      title: "loading"
+      title: "loading",
     };
   },
   onLoad() {},
-  methods: {}
+  methods: {
+		ChangeLoading(){
+			this.$refs.loading.open()
+		}
+	}
 };
 </script>
 

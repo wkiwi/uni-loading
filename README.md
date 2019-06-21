@@ -2,3 +2,6 @@
 uniapp loading加载动画
 
 封装集合多款纯css loading加载动画
+
+
+![demo](https://github.com/wkiwi/uni-loading/blob/master/demo.gif "demo")

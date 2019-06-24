@@ -168,10 +168,13 @@ export default {
       title: "loading",
     };
   },
-  onLoad() {},
+  onReady() {
+		this.$refs.loading.open()
+	},
   methods: {
 		ChangeLoading(){
 			this.$refs.loading.open()
+			//this.$refs.loading.close()
 		}
 	}
 };

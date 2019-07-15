@@ -15,11 +15,16 @@ Vue.component('w-loading',wLoading)
 ```
 
 ```
-<w-loading text="加载中.." mask="1" click="1" ref="loading"></w-loading>
+<w-loading text="加载中.." mask="true" click="true" ref="loading"></w-loading>
 text:     加载提示文字
-mask:  	  0 无遮罩层                |     1 有遮罩层 						 
-click:  	0 点击空白无法关闭加载状态   |     1 点击空白可关闭加载状态 
+mask:  	  true 无遮罩层                |     false 有遮罩层 						 
+click:  	true 点击空白无法关闭加载状态   |     false 点击空白可关闭加载状态 
 
+
+//初次进入页面触发加载，请将打开加载动画钩子，放入页面
+onReady中，放入onLoad中会报错
+原因为this.$refs.loading需要找到dom节点，在onLoad时
+dom不能保证渲染完毕，在onReady中可在dom渲染完毕才会触发
 
 //打开加载动画
 this.$refs.loading.open()

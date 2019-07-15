@@ -1,6 +1,6 @@
 <template>
-  <view class="mask" :class= "mask == 1 ? 'mask-show' : ''" @click="Mclose" v-if="show">
-		<!-- 加载动画开始 -->
+  <view class="mask" :class= "mask == 'true' || mask == true ? 'mask-show' : ''" @click="Mclose" v-if="show">
+		<!-- 加载动画开始 -->    <!-- loading1~loading30挑选任意一个替换下方html 且替换对应css -->
     <view class="container">
       <view class="popsicle">
         <view class="colors"></view>
@@ -19,8 +19,8 @@ export default {
   name: "w-loading",
 	props:{
 		text: String,
-		mask: Number,
-		click: Number,
+		mask: Boolean | String,
+		click: Boolean | String,
 	},
   data() {
     return {
@@ -29,7 +29,7 @@ export default {
   },
 	methods:{
 		Mclose(){
-			if(this.click == 1){
+			if(this.click == 'false' || this.click == false){
 				this.show = false
 			}
 		},

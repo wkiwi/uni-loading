@@ -93,9 +93,9 @@
 		<view class="box">
       <Loading30></Loading30>
     </view>
-    <w-loading text="加载中.." mask="1" click="1" ref="loading"></w-loading>
-		<!-- mask:  	0 无遮罩层              		|     1 有遮罩层 						 -->
-		<!-- click:  	0 点击空白无法关闭加载状态    |     1 点击空白可关闭加载状态 -->
+    <w-loading text="加载中.." mask="true" click="false" ref="loading"></w-loading>
+		<!-- mask:  	true 无遮罩层              		|     false 有遮罩层 						 -->
+		<!-- click:  	true 点击空白无法关闭加载状态   |     false 点击空白可关闭加载状态 -->
   </view>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <view class="mask" :class= "mask == 'true' || mask == true ? 'mask-show' : ''" @click="Mclose" v-if="show">
+  <view class="mask" :class= "mask == 'true' || mask == true ? 'mask-show' : ''" @click="Mclose" v-if="show" @touchmove.stop.prevent="preventTouchMove">
 		<!-- 加载动画开始 -->    <!-- loading1~loading30挑选任意一个替换下方html 且替换对应css -->
     <view class="container">
       <view class="popsicle">
@@ -28,6 +28,10 @@ export default {
 		};
   },
 	methods:{
+		preventTouchMove(){
+			console.log('stop user scroll it!');
+			return;
+		},
 		Mclose(){
 			if(this.click == 'false' || this.click == false){
 				this.show = false

@@ -6,6 +6,11 @@ uniapp loading加载动画
 # 使用注意事项
 uni-app插件中心只上传了w-loading组件，其他30+加载组件在完整包中,选择下载完整包，或进入github下载完整包，地址：https://github.com/wkiwi/uni-loading
 
+# 更新历史
+
+2019/7/23   10:47  更新防止遮罩滚动事件穿透
+@touchmove.stop.prevent="preventTouchMove"
+
 # 使用方法
 
 ```
